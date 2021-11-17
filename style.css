@@ -195,7 +195,7 @@ body {
 	border-radius: 10%;
 	width: 100px;
 	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .shoes-img-small img:hover {
@@ -362,11 +362,22 @@ body {
 	border-radius: 50%;
 	text-align: center;
 	cursor: pointer;
+	transition: stroke 0.3s ease;
 }
 
 .previous {
 	top: 50%;
 	left: -25px;
+}
+
+.previous svg path,
+.next svg path {
+	transition: stroke 0.3s ease;
+}
+
+.previous:hover svg path,
+.next:hover svg path {
+	stroke: hsl(26, 100%, 55%);
 }
 
 .next {
@@ -390,6 +401,14 @@ body {
 	position: relative;
 	top: -10px;
 	cursor: pointer;
+}
+
+.close-modal svg path {
+	transition: fill 0.3s ease;
+}
+
+.close-modal:hover svg path {
+	fill: hsl(26, 100%, 55%);
 }
 
 .is-hover {
@@ -437,8 +456,33 @@ body {
 	opacity: 0.9;
 }
 
-/* .is-active-focus {
-	border: 2px solid hsl(26, 100%, 55%);
+.is-active-focus {
+	border: 3px solid hsl(26, 100%, 55%);
 	border-radius: 10px;
-	opacity: 0.8;
-} */
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.shoes-img-small-shadow {
+	display: flex;
+	padding-top: 20px;
+	justify-content: space-between;
+}
+
+.shoes-img-small-shadow img {
+	border-radius: 10%;
+	width: 100px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.shoes-img-small-shadow img:hover {
+	opacity: 0.6;
+}
+
+.shoes-img-shadow {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	cursor: pointer;
+}
