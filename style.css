@@ -17,6 +17,14 @@ body {
 	margin: 0 auto;
 }
 
+.shadow-bg {
+	z-index: 10;
+}
+
+#modal {
+	z-index: 1000;
+}
+
 .nav-page {
 	padding: 30px 0;
 	display: flex;
