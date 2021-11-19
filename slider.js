@@ -5,10 +5,10 @@ const imgB = document.querySelector('.shoes-img')
 // slider first page
 const imgsBiggest = 
 [
-    {id: 0, img:'http://127.0.0.1:5500/images/image-product-1.jpg'},
-    {id: 1, img:'http://127.0.0.1:5500/images/image-product-2.jpg'},
-    {id: 2, img:'http://127.0.0.1:5500/images/image-product-3.jpg'},
-    {id: 3, img:'http://127.0.0.1:5500/images/image-product-4.jpg'},
+    {id: 0, img:'images/image-product-1.jpg'},
+    {id: 1, img:'images/image-product-2.jpg'},
+    {id: 2, img:'images/image-product-3.jpg'},
+    {id: 3, img:'images/image-product-4.jpg'},
 ]
 
 imgS.forEach( img => {
@@ -40,10 +40,10 @@ const arrowRight = document.querySelector('.next');
 
 const imgsBiggestShadow = 
 [
-    {id: 4, img:'http://127.0.0.1:5500/images/image-product-1.jpg'},
-    {id: 5, img:'http://127.0.0.1:5500/images/image-product-2.jpg'},
-    {id: 6, img:'http://127.0.0.1:5500/images/image-product-3.jpg'},
-    {id: 7, img:'http://127.0.0.1:5500/images/image-product-4.jpg'},
+    {id: 4, img:'images/image-product-1.jpg'},
+    {id: 5, img:'images/image-product-2.jpg'},
+    {id: 6, img:'images/image-product-3.jpg'},
+    {id: 7, img:'images/image-product-4.jpg'},
 ]
 
 imgSShadow.forEach( img => {
