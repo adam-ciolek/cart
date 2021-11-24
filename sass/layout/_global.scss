@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $font-priamry;
+	font-family: $font-family;
+}
