@@ -10,3 +10,14 @@ body {
 	font-size: $font-priamry;
 	font-family: $font-family;
 }
+
+.shadow {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(black, 0.8);
+	z-index: 100;
+	min-height: 100%;
+	@include mmq(large) {
+		display: none;
+	}
+}

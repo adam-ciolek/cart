@@ -7,9 +7,9 @@ const count = document.querySelector('.cart__info__count');
 let countItems = 1;
 let MAX_ITEMS = 10;
 
-const shoesImg = document.querySelector('.shoes-img');
-const modalImg = document.querySelector('.modal-img-shoes');
-const shadow = document.querySelector('.shadow-bg');
+const shoesImg = document.querySelector('.cart__slider__img');
+const modalImg = document.querySelector('.modal');
+const shadow = document.querySelector('.shadow');
 
 const addToCartItem = document.querySelector('.cart__info__add-to-cart');
 
@@ -50,31 +50,34 @@ const widgets = () => {
     })
 }
 
- // open modal with pictures of shoes and description
+console.log(window.screen)
 
-// const openModalPictures = () => {
+ // open modal with pictures of shoes 
 
-//     const modalImgShoes = document.querySelector('.modal-shoes-img-shadow')
+const openModalPictures = () => {
 
-//     shoesImg.addEventListener('click', () => {
-//         modalImgShoes.classList.add('modal-is-open')
-//         shadow.classList.add('shadow')
-//         modalImg.classList.remove('is-hidden')
-//     })
+    // const modalImgShoes = document.querySelector('.modal-shoes-img-shadow')
 
-// }
+    shoesImg.addEventListener('click', () => {
+        modalImg.classList.remove('is-hidden')
+        modalImg.classList.add('is-active')
+        shadow.classList.remove('is-hidden')
+        shadow.classList.add('is-active')
+    })
 
-// // close modal
-// const closeModal = () => {
-//     const close = document.querySelector('.close-modal');
-//     const modalImgShoes = document.querySelector('.modal-shoes-img-shadow')
+}
+
+// close modal
+const closeModal = () => {
+    const close = document.querySelector('.modal__close');
     
-//     close.addEventListener('click', () => {
-//         modalImgShoes.classList.remove('modal-is-open')
-//         shadow.classList.remove('shadow')
-//         modalImg.classList.add('is-hidden')
-//     })
-// }
+    close.addEventListener('click', () => {
+        modalImg.classList.remove('is-active')
+        modalImg.classList.add('is-hidden')
+        shadow.classList.remove('is-active')
+        shadow.classList.add('is-hidden')
+    })
+}
 
 // // Add to cart 
 
@@ -163,8 +166,8 @@ const addToCart = () => {
 const init = () => {
     openModal();
     widgets();
-    // openModalPictures();
-    // closeModal();
+    openModalPictures();
+    closeModal();
     addToCart();
 }
 

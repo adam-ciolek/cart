@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+.modal {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: 150;
+	&__close {
+		text-align: right;
+		position: relative;
+		top: -15px;
+		cursor: pointer;
+		svg > path {
+			transition: fill 0.3s ease;
+		}
+		&:hover svg > path {
+			fill: $color-orange;
+		}
+	}
+	&__img {
+		width: 500px;
+		height: 500px;
+		&__big {
+			width: 100%;
+			position: relative;
+		}
+		&__previous {
+			@include arrowshadow;
+			top: 40%;
+			left: -25px;
+			svg > path {
+				transition: stroke 0.3s ease;
+			}
+		}
+		&__next {
+			@include arrowshadow;
+			top: 40%;
+			right: -25px;
+			svg > path {
+				transition: stroke 0.3s ease;
+			}
+		}
+		&__previous:hover svg > path,
+		&__next:hover svg > path {
+			stroke: $color-orange;
+		}
+		&__small {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+			img {
+				width: 100px;
+				border-radius: 1.5em;
+				cursor: pointer;
+			}
+			&--is-active {
+				border: 2px solid $color-orange;
+				border-radius: 1.5em;
+				opacity: 0.7;
+			}
+		}
+	}
+	@include mmq(large) {
+		display: none;
+	}
+}

@@ -4,6 +4,7 @@
 	display: grid;
 	grid-template-columns: minmax(300px, 1200px);
 	justify-content: center;
+	min-height: 100vh;
 }
 
 .navigation {
