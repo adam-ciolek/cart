@@ -13,6 +13,7 @@
 	grid-template-columns: auto 1fr 70px;
 	grid-template-rows: 1fr;
 	align-items: center;
+	position: relative;
 	&__menu {
 		@include mq(large) {
 			display: none;
@@ -27,13 +28,26 @@
 	}
 	&__in-row {
 		display: none;
-		margin-left: 6em;
+		position: absolute;
+		top: 55px;
+		left: 0%;
+		z-index: 100;
+		background-color: $color-primary;
+		padding: 1rem 4rem;
 		&__menu {
 			display: flex;
+			flex-direction: column;
+			@include mq(large) {
+				flex-direction: row;
+			}
 		}
 		&__links {
 			list-style: none;
-			margin-right: 4em;
+			margin-bottom: 4em;
+			@include mq(large) {
+				margin-right: 4em;
+				margin-bottom: 0;
+			}
 		}
 		&__link {
 			text-decoration: none;
@@ -46,6 +60,13 @@
 		}
 		@include mq(large) {
 			display: flex;
+			position: relative;
+			top: 0;
+			left: 0;
+			margin-left: 6em;
+			z-index: 100;
+			background-color: inherit;
+			padding: 1rem;
 		}
 	}
 	&__line {
@@ -131,6 +152,7 @@
 		background-color: $color-orange;
 		border-radius: 50%;
 		padding: 0.12rem 0.45rem;
+		color: $color-primary;
 	}
 	&__modal {
 		top: 50px;

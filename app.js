@@ -50,8 +50,6 @@ const widgets = () => {
     })
 }
 
-console.log(window.screen)
-
  // open modal with pictures of shoes 
 
 const openModalPictures = () => {
